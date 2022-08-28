@@ -92,9 +92,8 @@ footer {
   grid-area: footer;
 }
 
-#categoryName,
-#categoryN {
-  display: inline;
+#categoryName{
+  color: aliceblue;
 }
 
 code {

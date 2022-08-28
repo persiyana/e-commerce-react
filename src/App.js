@@ -4,6 +4,7 @@ import apiKey from './asos-apiKey';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState([]);
 
   const options = {
     method: 'GET',
@@ -17,9 +18,10 @@ function App() {
 
   const fetchProducts = async () => {
     const response = await fetch(url, options);
-    const pr = await response.json();
-    const categoryName = pr.categoryName;
-    const products = pr.products;
+    const info = await response.json();
+    const category = info.categoryName;
+    const products = info.products;
+    setCategory(category);
     setProducts(products);
     console.log(products);
   };
@@ -30,6 +32,7 @@ function App() {
 
   return (
     <main>
+      <h2 id="categoryName">&gt;&gt; {category}</h2>
       <ul>
         {products.map((prod) => (
           <li>
