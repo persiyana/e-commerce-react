@@ -63,7 +63,7 @@ function App() {
         {products.map((prod) => (
           <li>
             <img src={"http://" + prod.imageUrl}/><br/>
-            <p>{prod.name}</p><br/>
+            <h3 class="product-name" title={prod.name} >{prod.name}</h3><br/>
             <h4>{prod.price.current.text}</h4><br/><button type="button">Buy</button>
           </li>
         ))}
