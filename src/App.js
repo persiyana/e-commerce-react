@@ -64,7 +64,7 @@ function App() {
           <li>
             <img src={"http://" + prod.imageUrl}/><br/>
             <h3 class="product-name" title={prod.name} >{prod.name}</h3><br/>
-            <h4>{prod.price.current.text}</h4><br/><button type="button">Buy</button>
+            <div class="price-buyButton"><h4>{prod.price.current.text}</h4><button type="button">Buy</button></div>
           </li>
         ))}
       </ul> 
